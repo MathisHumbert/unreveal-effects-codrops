@@ -1,0 +1,112 @@
+:root {
+  --color-text: #efe5e5;
+  --color-link: #efe5e5;
+  --color-text-inverted: #b3ac99;
+  --color-bg: #42423e;
+  --color-bg-overlay: #86412f;
+  --color-text-preview: #fffaea;
+  --color-title-preview: #eba089;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: acumin-pro, sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+
+.oh {
+  position: relative;
+  overflow: hidden;
+}
+
+.oh__inner {
+  display: inline-block;
+  will-change: transform;
+}
+
+.content {
+  position: relative;
+  height: 100vh;
+  grid-area: '1/1/-1/-1';
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  z-index: 1;
+  line-height: 1;
+}
+
+.content__item {
+  height: 100%;
+  width: 25%;
+  max-width: 500px;
+  padding: calc(2rem + 5vh) 2rem 4rem;
+}
+
+.content__item:nth-child(2n) {
+  padding-top: calc(3rem + 15vh);
+}
+
+.content__item__title {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 3.25vw, 1.85rem);
+  font-weight: 300;
+  font-family: kudryashev-d-excontrast-sans, sans-serif;
+}
+
+.content__item__title .oh__inner {
+  padding-top: 0.75vw;
+  line-height: 1.2;
+}
+
+.content__item__img__wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.75;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.content__item__img {
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.content__item:nth-child(1) .content__item__img {
+  background-image: url('9.avif');
+}
+
+.content__item:nth-child(2) .content__item__img {
+  background-image: url('10.avif');
+}
+
+.content__item:nth-child(3) .content__item__img {
+  background-image: url('11.avif');
+}
+
+.content__item:nth-child(4) .content__item__img {
+  background-image: url('12.avif');
+}
+
+.content__item__caption {
+  margin-top: 0.75rem;
+}
