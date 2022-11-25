@@ -252,7 +252,7 @@ const onButtonClick = () => {
     )
     .to(previewBack, { opacity: 0, ease: 'power2' }, 0)
     .add(() => {
-      const flip = Flip.getState(contentImgWrapper);
+      const flip = Flip.getState(contentImgWrapper[index]);
       contentTitleContainer[index].after(contentImgWrapper[index]);
       Flip.from(flip, {
         duration: 0.8,
