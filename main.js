@@ -53,7 +53,7 @@ const init = () => {
 
   console.log(imgLoaded.images.length);
   imgLoaded.on('done', () => {
-    // document.body.classList.remove('loading');
+    document.body.classList.remove('loading');
   });
 };
 
